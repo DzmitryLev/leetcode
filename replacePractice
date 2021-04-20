@@ -1,0 +1,11 @@
+def replacePractice(s):
+    list = []
+    for name in s:
+        name = name.replace(".", " ");
+        name = name.replace("Lenin", "Ulyanov")
+        list.append(name)
+    return list
+
+s = ["Dzmitry.Levankou", "Vladimir.Lenin", "Marilyn.Manson"]
+a = replacePractice(s)
+print(a)
