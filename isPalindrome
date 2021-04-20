@@ -1,0 +1,13 @@
+class Solution(object):
+    def isPalindrome(s):
+        a = ''
+        for i in s:
+            if i.isalpha() or i.isnumeric():
+                a += i.lower()
+        if a == a[::-1]:
+            return True
+        return False
+        
+    s = "A man, a plan, a canal: Panama"
+    q = isPalindrome(s)
+    print(q)
