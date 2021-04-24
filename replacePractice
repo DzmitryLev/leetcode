@@ -1,26 +1,33 @@
-def replacePractice(s):
-    list = []
+def replacePractice(s, l):
+    q = []
+    r = "!"
     for name in s:
-        name = name.replace(".", " ");
-        name = name.replace("Lenin", "Ulyanov")
-        list.append(name)
-    return list
+        if name == l:
+            name = r
+        q += name
+    return q
+l = "c"
+s = ["a", "b", "c", "d"]
 
-def findPractice(s):
+# The number of words in the list will be returned if the list does not contain the whole word we are searching for.
+def findPractice(string, x):
+    a = 0
+    for i in string:
+        a += 1
+        if i == x:
+            break
+    return a
+
+x = "bob"
+string = ["pope", "rome", "bob", "cat"]
+
+def trimPractice(b):
     list = []
-    for index in s:
-        index = index.lower().find("i")
-        list.append(index)
+    for name in b:
+        for i in name:
+            if i == " ":
+                i = ""
+            list += i
     return list
 
-def trimPractice(s):
-    list = []
-    for name in s:
-        name = name.strip()
-        list.append(name)
-    return list
-
-s = ["Dzmitry.Levankou", "Vladimir.Lenin", "Marilyn.Manson", "     Bob Iron    "]
-print(replacePractice(s))
-print(findPractice(s))
-print(trimPractice(s))
+b = ["  bob   ", " mark   "]
