@@ -1,33 +1,43 @@
-def replacePractice(s, l):
-    q = []
-    r = "!"
-    for name in s:
-        if name == l:
-            name = r
-        q += name
-    return q
-l = "c"
-s = ["a", "b", "c", "d"]
+def replacePractice(initialString, haveToBeReplaced):
+    emptyString = ""
+    willBeReplacedByThat = "!"
+    for name in initialString:
+        if name == haveToBeReplaced:
+            name = willBeReplacedByThat
+        emptyString += name
+    return emptyString
+haveToBeReplaced = "i"
+initialString = "I want to ride my bicycle"
+print(replacePractice(initialString, haveToBeReplaced))
 
 # The number of words in the list will be returned if the list does not contain the whole word we are searching for.
-def findPractice(string, x):
-    a = 0
-    for i in string:
-        a += 1
-        if i == x:
+def findPractice(stringList, needsToBeFind):
+    countInt = 0
+    for i in stringList:
+        countInt += 1
+        if i == needsToBeFind.lower():
             break
-    return a
+    return countInt
+needsToBeFind = "bob"
+stringList = ["pope", "rome", "bob", "cat"]
+print(findPractice(stringList, needsToBeFind))
 
-x = "bob"
-string = ["pope", "rome", "bob", "cat"]
+def findString(fromSearch):
+    countNumber = 0
+    for i in fromSearch:
+        countNumber += 1
+        if i == fromSearch[1:2]:
+            break
+    return countNumber
+fromSearch ="Hello"
+print(findString(fromSearch))
 
-def trimPractice(b):
-    list = []
-    for name in b:
-        for i in name:
-            if i == " ":
-                i = ""
-            list += i
-    return list
 
-b = ["  bob   ", " mark   "]
+def trimPractice(initialStr):
+    newString = ""
+    for i in initialStr[1:-1]:
+        newString += i
+    return newString
+
+initialStr = " bob junior bobovich "
+print(trimPractice(initialStr))
