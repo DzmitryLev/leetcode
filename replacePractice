@@ -35,9 +35,9 @@ print(findString(fromSearch))
 
 def trimPractice(initialStr):
     newString = ""
-    for i in initialStr[1:-1]:
+    for i in initialStr[2:-2]:
         newString += i
     return newString
 
-initialStr = " bob junior bobovich "
+initialStr = "  bob junior bobovich  "
 print(trimPractice(initialStr))
