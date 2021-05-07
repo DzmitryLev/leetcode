@@ -1,14 +1,12 @@
-def replacePractice(initialString):
-    emptyString = ""
-    emptyStringTwo =""
-    willBeReplacedByThat = "destroy"
-    for name in initialString[0:10]:
-        emptyString += name
-    for secondName in initialString[14:25]:
-        emptyStringTwo+=secondName
-    return emptyString + willBeReplacedByThat + emptyStringTwo
+def replacePractice(initialString, willBeReplacedByThat, willBeReplaced):
+    for i in range(len(initialString)):
+        if willBeReplaced == initialString[i:i + len(willBeReplaced)]:
+            initialString = initialString[:i] + willBeReplacedByThat + initialString[i + len(willBeReplaced):]
+    return initialString
+willBeReplaced = "ride"
+willBeReplacedByThat = "destroy"
 initialString = "I want to ride my bicycle"
-print(replacePractice(initialString))
+print(replacePractice(initialString, willBeReplacedByThat, willBeReplaced))
 
 # The number of words in the list will be returned if the list does not contain the whole word we are searching for.
 def findPractice(stringList, needsToBeFind):
