@@ -20,15 +20,17 @@ needsToBeFind = "bob"
 stringList = ["pope", "rome", "bob", "cat"]
 print(findPractice(stringList, needsToBeFind))
 
-def findString(fromSearch):
+# The method has to find an index of "needToFind" in the "fromSearch" string and return its index (number)
+def findString(fromSearch, needToFind):
     countNumber = 0
-    for i in fromSearch:
+    for i in range(len(fromSearch)):
         countNumber += 1
-        if i == fromSearch[1:2]:
-            break
+        if needToFind == fromSearch[i:i + len(needToFind)]:
+            break;
     return countNumber
+needToFind = "el"
 fromSearch ="Hello"
-print(findString(fromSearch))
+print(findString(fromSearch, needToFind))
 
 
 def trimPractice(initialStr):
