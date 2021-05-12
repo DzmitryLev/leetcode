@@ -1,0 +1,3 @@
+from itertools import groupby
+for howMany, g in groupby(input()):
+    print((len(list(g)),int(howMany)),end=" ")
