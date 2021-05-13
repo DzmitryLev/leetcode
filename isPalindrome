@@ -1,0 +1,16 @@
+class Solution(object):
+    def isPalindrome(stringLine):
+        local = ''
+        answer = False
+        for i in stringLine:
+            if i.isalpha() or i.isnumeric():
+                local += i.lower()
+        if local == local[::-1]:
+            answer = True
+        else:
+            answer = False
+        return answer
+
+    stringLine = "A man, a plan, a canal: Panama"
+    requestMethod = isPalindrome(stringLine)
+    print(requestMethod)

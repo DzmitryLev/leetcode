@@ -1,0 +1,43 @@
+def replacePractice(initialString, willBeReplacedByThat, willBeReplaced):
+    for i in range(len(initialString)):
+        if willBeReplaced == initialString[i:i + len(willBeReplaced)]:
+            initialString = initialString[:i] + willBeReplacedByThat + initialString[i + len(willBeReplaced):]
+    return initialString
+willBeReplaced = "ride"
+willBeReplacedByThat = "destroy"
+initialString = "I want to ride my bicycle"
+print(replacePractice(initialString, willBeReplacedByThat, willBeReplaced))
+
+# The number of words in the list will be returned if the list does not contain the whole word we are searching for.
+def findPractice(stringList, needsToBeFind):
+    countInt = 0
+    for i in stringList:
+        countInt += 1
+        if i == needsToBeFind.lower():
+            break
+    return countInt
+needsToBeFind = "bob"
+stringList = ["pope", "rome", "bob", "cat"]
+print(findPractice(stringList, needsToBeFind))
+
+# The method has to find an index of "needToFind" in the "fromSearch" string and return its index (number)
+def findString(fromSearch, needToFind):
+    countNumber = 0
+    for i in range(len(fromSearch)):
+        countNumber += 1
+        if needToFind == fromSearch[i:i + len(needToFind)]:
+            break;
+    return countNumber
+needToFind = "el"
+fromSearch ="Hello"
+print(findString(fromSearch, needToFind))
+
+
+def trimPractice(initialStr):
+    newString = ""
+    for i in initialStr[2:-2]:
+        newString += i
+    return newString
+
+initialStr = "  bob junior bobovich  "
+print(trimPractice(initialStr))

@@ -1,0 +1,9 @@
+class Solution(object):
+    def singleNumber(nums):
+        for i in nums:
+            if nums.count(i) == 1:
+                return i
+        return nums
+    nums = [1, 1, 2, 3, 4, 5, 4, 5, 3, -1, 2]
+    q = singleNumber(nums)
+    print(q)
