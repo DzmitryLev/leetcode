@@ -1,0 +1,18 @@
+import string
+def checkIfPangram(sentence):
+    listEmpty = []
+    alphabetList = []
+    alphabet = string.ascii_lowercase
+    for x in alphabet:
+        alphabetList+=x
+    for i in sentence:
+        if i not in listEmpty:
+            listEmpty+=i
+    listEmpty.sort()
+    if listEmpty == alphabetList:
+        return True
+    return False
+
+sentence = "thequickbrownfoxjumpsoverthelazydog"
+q = checkIfPangram(sentence)
+print(q)
